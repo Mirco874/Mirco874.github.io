@@ -9,6 +9,7 @@
     --Light-grayish-blue:hsl(223, 64%, 98%);
     --White:hsl(0, 0%, 100%);
     --Black:hsl(0, 0%, 0%); /*(with 75% opacity for lightbox background)*/
+    --light-Orange: hsl(26, 89%, 65%);
 }
 
 body{
@@ -19,17 +20,19 @@ body{
 
 .product-article{
     width: 80%;
-    height: 80vh;
-    margin:5% 10%;
-
+    height: 70%;
+    margin: 5% 15%;
     display: inline-flex;
 }
 
 .product-article__article-view{
-    width: 120vh;
+    height: 100%;
+    width: 90%;
 }
 
 .product-article__article-view__main-image{
+    height: 70%;
+    width: 100%;
     border-radius: 10px;
 }
 
@@ -37,6 +40,7 @@ body{
     border-radius: 20px;
     height: 100%;
     width: 100%;
+    min-width: 30vh;
 }
 
 .product-article__article-view__select-images{
@@ -54,9 +58,10 @@ border-radius: 10px;
 
 .product-article__article-description{
     padding-top: 3%;
-    padding-left: 10%;
-    padding-right: 10%;
+    margin-left: 10%;
+    margin-right: 15%;
     box-sizing: border-box;
+
 }
 
 .product-article__article-description__tittle h1{
@@ -125,7 +130,7 @@ button{
     font-size: 16px;
     text-align: center;
     border-radius: 5px;
-    background-color: var(--Orange);
+    background: var(--Orange) ;
     color: var(--White);
 }
 
@@ -136,3 +141,21 @@ display: flex;
 .inputs-container{
 display: inline-flex;
 }
+
+.product-article__article-description__amount__submit-btn:hover{
+    opacity: 0.5;
+}
+
+.product-article__article-description__amount__reduce-btn:hover{
+    opacity: 0.5;
+}
+
+.product-article__article-description__amount__increase-btn:hover{
+    opacity: 0.5;
+}
+
+.product-article__article-view__select-images__thumbnail:hover{
+    opacity: 0.5;
+    }
+
+
