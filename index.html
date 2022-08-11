@@ -8,11 +8,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/navigation-bar-styles.css">
     <title>E-commerce product page</title>
 </head>
 <body>
     <header>
-        <nav></nav>
+        <nav class="navigation-bar">
+            <div class="navigation-bar__logo-pagina"> <h1>sneakers</h1></div>
+            <div class="navigation-bar__menu"> 
+                <ul class="navigation-bar__menu__list">
+                    <li class="navigation-bar__menu__list__item"><p>Collections</p></li>
+                    <li class="navigation-bar__menu__list__item"><p>Men</p></li>
+                    <li class="navigation-bar__menu__list__item"> <p>Women</p></li>
+                    <li class="navigation-bar__menu__list__item"><p>About</p></li>
+                    <li class="navigation-bar__menu__list__item"> <p>Contact</p></li>
+                </ul>
+            </div>
+            <div class="navigation-bar__purchase-cart">
+                <div class="navigation-bar__purchase-cart__purchases"><p>2</p></div>
+                <button class="navigation-bar__purchase-cart__purchases_btn" id="purchases-btn"><img src="./images/icon-cart.svg" alt="purchase-cart-icon"> </button>
+            </div> 
+            <div class="navigation-bar__purchase-cart__menu" id="cart-menu" hidden>
+                <p><b>Cart</b></p>
+            </div>
+            <div class="navigation-bar__profile-picture">
+                <button class="navigation-bar__profile-picture__btn"><img src="./images/image-avatar.png" alt="profile-picture"> </button>
+            </div> 
+        </nav>
+
     </header>
     <main>
         <section>
@@ -60,9 +83,7 @@
         </section>
 
     </main>
-
-
-
+<script src="./scripts/main.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,129 @@
+:root{
+    /*Primary*/
+    --Orange: hsl(26, 100%, 55%);
+    --Paleo-orange: hsl(25, 100%, 94%);
+    /* Neutral */
+    --Very-vark-blue:hsl(220, 13%, 13%);
+    --Dark-grayish-blue:hsl(219, 9%, 45%);
+    --Grayish-blue:hsl(220, 14%, 75%);
+    --Light-grayish-blue:hsl(223, 64%, 98%);
+    --White:hsl(0, 0%, 100%);
+    --Black:hsl(0, 0%, 0%); /*(with 75% opacity for lightbox background)*/
+}
+
+.navigation-bar{
+margin-inline: 8%;
+display: inline-flex;
+position: relative;
+width: 80%;
+border-bottom: 1px var(--Grayish-blue) solid;
+align-items: flex-start
+}
+
+.navigation-bar__logo-pagina{
+    width: 15%;
+}
+
+.navigation-bar__menu{
+    width: 60%;
+}
+
+.navigation-bar__menu__list{
+    position: absolute;
+    left: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+    height: 100%;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    align-items: center
+}
+
+.navigation-bar__menu__list__item{
+    height: 100%;
+    color: var(--Grayish-blue);
+}
+
+.navigation-bar__purchase-cart{
+    top: 2vh;
+    position: absolute;
+    right: 13vh;
+    
+}
+
+.navigation-bar__profile-picture{
+    position: absolute;
+    right: 1vh;
+}
+
+.navigation-bar__profile-picture__btn{
+    height: 60px;
+    width: 55px;
+    background-color: white;
+    
+}
+
+.navigation-bar__profile-picture__btn img{
+    border-radius: 28px;
+    max-height: 100%;
+    max-width: 100%;
+}
+.navigation-bar__purchase-cart__purchases{
+    position: absolute;
+    left: 23px;
+    height: 13px;
+    width: 22px;
+    background-color: var(--Orange);
+    border-radius: 4px;
+}
+
+.navigation-bar__purchase-cart__purchases{
+    position: absolute;
+    left: 23px;
+    height: 13px;
+    width: 22px;
+    background-color: var(--Orange);
+    border-radius: 4px;
+}
+
+.navigation-bar__purchase-cart__purchases p{
+    color: white;
+    font-size: 11px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.navigation-bar__purchase-cart__purchases_btn{
+    background-color: white;
+}
+
+.navigation-bar__purchase-cart__menu{
+    /* visibility: hidden; */
+    position: absolute;
+    top: 80%;
+    right: 0;
+    border-radius: 5px;
+    width: 45vh;
+    height: auto;
+    background-color: white;
+    box-shadow: 0 5px 5px 3px #e0dbdb;
+}
+
+.navigation-bar__purchase-cart__menu p{
+padding: 10px;
+margin: 0;
+border-bottom: 1px solid var(--Grayish-blue);
+}
+
+
+
+.navigation-bar__profile-picture__btn img:hover{
+    border: 1px var(--Orange) solid;
+}
+
+.navigation-bar__menu__list__item:hover{
+    border-bottom: 3px var(--Orange) solid;
+}
