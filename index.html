@@ -25,11 +25,16 @@
                 </ul>
             </div>
             <div class="navigation-bar__purchase-cart">
-                <div class="navigation-bar__purchase-cart__purchases"><p>2</p></div>
-                <button class="navigation-bar__purchase-cart__purchases_btn" id="purchases-btn"><img src="./images/icon-cart.svg" alt="purchase-cart-icon"> </button>
+                <div class="navigation-bar__purchase-cart__notifications">  
+                </div>
+                <button class="navigation-bar__purchase-cart__purchases_btn" id="purchases-btn"><img src="./images/icon-cart.svg" alt="purchase-cart-icon"> </button>     
             </div> 
             <div class="navigation-bar__purchase-cart__menu" id="cart-menu" hidden>
-                <p><b>Cart</b></p>
+                <p class="navigation-bar__purchase-cart__menu_title"><b>Cart</b></p>
+                <div class="navigation-bar__purchase-cart__menu__container">
+                    <p>your cart is empty</p>
+                    <ul class="navigation-bar__purchase-cart__menu__container__list"></ul>
+                </div>
             </div>
             <div class="navigation-bar__profile-picture">
                 <button class="navigation-bar__profile-picture__btn"><img src="./images/image-avatar.png" alt="profile-picture"> </button>
@@ -62,8 +67,8 @@
                         These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole. They'll withstand everything the weather can offer.
                     </div>
                     <div class="product-article__article-description__total-price"> <b>$125.00</b></div>
-                    <div class="product-article__article-description__discount"><b>50%</b></div>
-                    <div class="product-article__article-description__real-price"><b>$250.00</b></div>
+                    <div class="product-article__article-description__discount"  ><b>50%</b></div>
+                    <div class="product-article__article-description__real-price" ><b>$250.00</b></div>
                     <form class="product-article__article-description__amount">
                         <div class="inputs-container">
                         <div class="cuantity-selector">
@@ -71,7 +76,7 @@
                             <input class="product-article__article-description__amount__quantity" type="text" name="units" id="input-units" min="0" max="10" value="0" readonly>
                             <button class="product-article__article-description__amount__increase-btn" id="amount__increase-btn"> <b>+</b> </button>
                         </div>
-                        <button class="product-article__article-description__amount__submit-btn" type="submit"> 
+                        <button class="product-article__article-description__amount__submit-btn" id="add-to-cart-button" type="submit"> 
                             <img src="./images/icon-cart.svg" alt="purchase-cart-icon">
                             Add to cart
                         </button>                    
@@ -84,6 +89,8 @@
 
     </main>
 <script src="./scripts/main.js"></script>
+<script src="./scripts/purchasing-process.js"></script>
+<script src="./scripts/remove-purchases.js"></script>
 
 </body>
 </html>

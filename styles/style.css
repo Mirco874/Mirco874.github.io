@@ -102,9 +102,16 @@ color: var(--Dark-grayish-blue);
     text-decoration: line-through;
 }
 
-button{
+.product-article__article-description__amount__reduce-btn,.product-article__article-description__amount__increase-btn{
     background-color: whitesmoke;
     color: var(--Orange);
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}
+
+button{
     width: 40px;
     height: 40px;
     border: none;
@@ -157,5 +164,8 @@ display: inline-flex;
 .product-article__article-view__select-images__thumbnail:hover{
     opacity: 0.5;
     }
+
+
+
 
 
