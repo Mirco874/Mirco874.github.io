@@ -65,14 +65,15 @@ height: 10vh;
 
 .navigation-bar__profile-picture{
     position: absolute;
-    right: 1vh;
+    right: 3vh;
+    top: 20%;
 }
 
 .navigation-bar__profile-picture__btn{
-    height: 60px;
-    width: 55px;
     background-color: white;
     cursor: pointer;
+    height: 37px;
+    width: 49px;
     
 }
 
@@ -137,7 +138,6 @@ margin-top: 2%;
 margin-bottom: 10%;
 }
 
-
 .navigation-bar__purchase-cart__menu__container__list__item{
 display: flex;
 flex-direction: row;
@@ -185,4 +185,35 @@ border-radius: 10px;
 .navigation-bar__purchase-cart__menu__container__list__item__remove-btn{
     background-color: white;
     cursor: pointer;
+}
+
+@media screen and (max-width: 650px) {
+    .navigation-bar{
+        border: 0;
+    }
+    .navigation-bar__menu__list {
+        visibility: hidden;
+    }
+
+    .navigation-bar__logo-pagina h1{
+        font-size: 35px;
+    }
+    .navigation-bar__purchase-cart__menu{
+        position: fixed;
+        left: 4%;
+        top:12%;
+        width: 92%;
+        height: 40%;
+        box-shadow: none;
+    }
+
+    .navigation-bar__profile-picture {
+        left: 100%;
+    }
+
+    .navigation-bar__purchase-cart {
+        left: 85%;
+    }
+
+
 }

@@ -72,7 +72,6 @@ border-radius: 10px;
 
 .product-article__article-description__name-company{
     color:var(--Orange);
-
 }
 
 .product-article__article-description__tittle{
@@ -165,7 +164,89 @@ display: inline-flex;
     opacity: 0.5;
     }
 
+    @media screen and (max-width: 650px) {
+
+        .product-article__article-description__tittle h1{
+            font-weight: 700;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            font-size: 26px;
+        }
+
+        .product-article__article-description__name-company{
+            font-size: 14px;
+        }
+
+        .product-article{
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+        .product-article__article-view {
+            height: 50vh;
+            width: 100%;
+        }
+
+        .product-article__article-view__main-image__image {
+            border-radius: 0px; 
+            height: 50vh;
+
+        }
+        .product-article__article-description{
+            padding-right: 0px;
+            padding-left: 0px;
+            margin-right: 5%;
+            margin-top: 5%;
+            margin-left: 5%;
+        }
+        .product-article__article-view__select-images {
+            visibility: hidden;
+            margin: 0;
+            width: 0;
+            height: 0;}
+
+        .inputs-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cuantity-selector{
+            width: 100%;
+            height: 6vh;
+            margin-bottom: 5%;
+        }
+        .product-article__article-description__amount__reduce-btn,
+        .product-article__article-description__amount__increase-btn
+        {
+            width: 15vh;
+            font-size: 18px;
+        }
+
+
+        .product-article__article-description__amount__quantity
+        {
+            width: 70vh;
+        }
+
+        .product-article__article-description__amount__submit-btn {
+            margin-bottom: 5%;
+            margin-inline: 0;
+            width: 100%;
+            height: 8vh;
+            font-size: 16px;
+        }
+
+        .navigation-bar__purchase-cart__menu__container__list__item {
+            justify-content: center;
+        }
 
 
 
+
+
+
+
+}
 
