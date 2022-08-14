@@ -14,8 +14,10 @@
 <body>
     <header>
         <nav class="navigation-bar">
-            <div class="navigation-bar__logo-pagina"> <h1>sneakers</h1></div>
-            <div class="navigation-bar__menu"> 
+            <Button class="navigation-bar__open-menu-btn"> <img src="./images/icon-menu.svg" alt="boton-abrir-menu"> </Button>
+            <h1 class="navigation-bar__logo-pagina">sneakers</h1>
+            <div class="navigation-bar__menu">
+                <button class="navigation-bar__close-menu-btn"><img src="./images/icon-close.svg"  alt="boton-cerrar-menu"></button>   
                 <ul class="navigation-bar__menu__list">
                     <li class="navigation-bar__menu__list__item"><p>Collections</p></li>
                     <li class="navigation-bar__menu__list__item"><p>Men</p></li>
@@ -50,10 +52,10 @@
                         <img class="product-article__article-view__main-image__image" src="./images/image-product-1.jpg" alt="image-sneakers-limited-edition">
                     </div>
                     <div class="product-article__article-view__select-images">
-                        <img class="product-article__article-view__select-images__thumbnail" src="./images/image-product-1-thumbnail.jpg" alt="">
-                        <img class="product-article__article-view__select-images__thumbnail" src="./images/image-product-2-thumbnail.jpg" alt="">
-                        <img class="product-article__article-view__select-images__thumbnail" src="./images/image-product-3-thumbnail.jpg" alt="">
-                        <img class="product-article__article-view__select-images__thumbnail" src="./images/image-product-4-thumbnail.jpg" alt="">
+                        <img class="product-article__article-view__select-images__thumbnail" src="./images/image-product-1-thumbnail.jpg" alt="" >
+                        <img class="product-article__article-view__select-images__thumbnail" src="./images/image-product-2-thumbnail.jpg" alt="" >
+                        <img class="product-article__article-view__select-images__thumbnail" src="./images/image-product-3-thumbnail.jpg" alt="" >
+                        <img class="product-article__article-view__select-images__thumbnail" src="./images/image-product-4-thumbnail.jpg" alt="" >
                     </div>
                 </div>
                 <div class="product-article__article-description">
@@ -91,6 +93,8 @@
 <script src="./scripts/main.js"></script>
 <script src="./scripts/purchasing-process.js"></script>
 <script src="./scripts/remove-purchases.js"></script>
+<script src="./scripts/menu-responsive.js"></script>
+
 
 </body>
 </html>
