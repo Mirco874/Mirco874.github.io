@@ -49,13 +49,15 @@
             <article class="product-article">
                 <div class="product-article__article-view">
                     <div class="product-article__article-view__main-image">
+                        <button class="product-article__article-view__main-image__change-img-btn  previous-btn"><img src="./images/icon-previous.svg" alt="imagen-boton-anterior-imagen"></button>
                         <img class="product-article__article-view__main-image__image" src="./images/image-product-1.jpg" alt="image-sneakers-limited-edition">
+                        <button class="product-article__article-view__main-image__change-img-btn next-btn"> <img src="./images/icon-next.svg" alt="imagen-boton-siguiente-imagen"></button>
                     </div>
-                    <div class="product-article__article-view__select-images">
-                        <img class="product-article__article-view__select-images__thumbnail" src="./images/image-product-1-thumbnail.jpg" alt="" >
-                        <img class="product-article__article-view__select-images__thumbnail" src="./images/image-product-2-thumbnail.jpg" alt="" >
-                        <img class="product-article__article-view__select-images__thumbnail" src="./images/image-product-3-thumbnail.jpg" alt="" >
-                        <img class="product-article__article-view__select-images__thumbnail" src="./images/image-product-4-thumbnail.jpg" alt="" >
+                    <div class="product-article__article-view__select">
+                        <img class="product-article__article-view__select__thumbnail image-btn-active" id="product-select-image-1" src="./images/image-product-1-thumbnail.jpg" alt="miniatura-imagen-producto-1" onclick="setMainImage(1)">
+                        <img class="product-article__article-view__select__thumbnail" id="product-select-image-2" src="./images/image-product-2-thumbnail.jpg" alt="miniatura-imagen-producto-2" onclick="setMainImage(2)">
+                        <img class="product-article__article-view__select__thumbnail" id="product-select-image-3" src="./images/image-product-3-thumbnail.jpg" alt="miniatura-imagen-producto-3" onclick="setMainImage(3)">
+                        <img class="product-article__article-view__select__thumbnail" id="product-select-image-4" src="./images/image-product-4-thumbnail.jpg" alt="miniatura-imagen-producto-4" onclick="setMainImage(4)">      
                     </div>
                 </div>
                 <div class="product-article__article-description">
@@ -94,7 +96,6 @@
 <script src="./scripts/purchasing-process.js"></script>
 <script src="./scripts/remove-purchases.js"></script>
 <script src="./scripts/menu-responsive.js"></script>
-
-
+<script src="./scripts/cambiar-imagen.js"></script>
 </body>
 </html>
