@@ -257,11 +257,13 @@ display: inline-flex;
         .previous-btn{
             top: 30%;
             left: 6%;
+            z-index: 0;
         }
 
         .next-btn{
             top: 30%;
             right: 6%;
+            z-index: 0;
         }
 
 
