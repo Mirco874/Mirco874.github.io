@@ -23,8 +23,7 @@ prevBtn.addEventListener("click",()=>{
         {indexCurrentImage=thumbnailList.length-1;}
     else
         {indexCurrentImage=indexCurrentImage-1;}
-
-    mainImage.src=`./images/image-product-${indexCurrentImage+1}.jpg`;
+    setMainImage(indexCurrentImage+1);
 })
 
 
@@ -33,8 +32,7 @@ nextBtn.addEventListener("click",()=>{
         {indexCurrentImage=0;}
     else
         {indexCurrentImage=indexCurrentImage+1;}
-
-    mainImage.src=`./images/image-product-${indexCurrentImage+1}.jpg`;
+    setMainImage(indexCurrentImage+1);
 
 })
 
