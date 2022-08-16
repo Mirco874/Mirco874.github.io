@@ -66,11 +66,11 @@ cursor: pointer;
 }
 
 .article__details{
+
     padding-top: 3%;
     margin-left: 10%;
     margin-right: 15%;
     box-sizing: border-box;
-
 }
 
 .article__tittle{
@@ -86,34 +86,39 @@ cursor: pointer;
 
 .article__company{
     color:var(--Orange);
-    /*  */
-    /*  */
 }
 
 
 
 .article__description {
 color: var(--Dark-grayish-blue);
-/*  */
-/*  */
 }
 
 .article__discount {
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 5%;
     color:var(--Orange);
     border-radius: 5px;   
     background-color: var(--Paleo-orange);
     height: 20px;
     width: 33px; 
+
 }
 
 .article__total-price {
     font-size: 24px;
+    display: inline-block;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 
 .article__real-price {
     color: var(--Grayish-blue);
     text-decoration: line-through;
+    
 }
 
 .article__amount-btn
@@ -150,6 +155,12 @@ color: var(--Dark-grayish-blue);
     background: var(--Orange) ;
     color: var(--White);
 }
+
+.nav__empty-message{
+    color: var(--Dark-grayish-blue);
+    font-weight: 700;
+}
+
 
 .article__quantity-selector {
 display: flex;
@@ -198,7 +209,6 @@ display: inline-flex;
             margin-top: 5%;
             margin-left: 5%;
         }
-
 
         .article__tittle{
             font-weight: 700;
@@ -258,7 +268,6 @@ display: inline-flex;
             width: 100%;
             height: 8vh;
             font-size: 16px;
-
         }
 
 
@@ -266,9 +275,6 @@ display: inline-flex;
             border-radius: 20px;
             visibility: visible;
         }
-        /*  */
-        /*  */
-        /*  */
         .article__btn--prev {
             top: 30%;
             left: 6%;
@@ -281,6 +287,12 @@ display: inline-flex;
             z-index: 0;
         }
 
+        .article__real-price {
+            display: inline-block;
+            position: absolute;
+            right: 10%;
+            margin: 0;
+        }
 
 }
 
