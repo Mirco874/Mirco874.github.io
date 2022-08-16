@@ -1,15 +1,17 @@
 
-const cartButton=document.getElementById("purchases-btn");
-const cartMenu=document.getElementById("cart-menu");
+const cartButton=document.querySelector(".nav__purchase-cart-btn");
+const cartMenu=document.querySelector(".nav__purchases-menu");
 
 cartButton.addEventListener("click",(e)=>{
     e.preventDefault();
     cartMenu.hidden=!cartMenu.hidden
 })
 
-const increaseButton=document.getElementById("amount__increase-btn");
-const reduceButton=document.getElementById("amount__reduce-btn");
-const units=document.getElementById("input-units");
+
+
+const increaseButton=document.querySelector(".article__amount-btn--increase");
+const reduceButton=document.querySelector(".article__amount-btn--reduce");
+const units=document.querySelector(".article__quantity");
 
 increaseButton.addEventListener("click",(e)=>{
     e.preventDefault();
