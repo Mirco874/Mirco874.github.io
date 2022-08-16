@@ -1,11 +1,11 @@
-const purchaseButton=document.getElementById("add-to-cart-button");
-const inputUnits=document.getElementById("input-units");
-let totalPrice=document.querySelector(".product-article__article-description__total-price b").innerHTML;
-const cartMenuContainer=document.querySelector(".navigation-bar__purchase-cart__menu__container");
-let cartMenuList=document.querySelector(".navigation-bar__purchase-cart__menu__container__list").innerHTML;
-let articleName=document.querySelector(".product-article__article-description__tittle h1").innerHTML;
-const notifications=document.querySelector(".navigation-bar__purchase-cart__notifications");
-const articleImage=document.querySelector(".product-article__article-view__main-image__image");
+const purchaseButton=document.querySelector(".article__submit-btn");
+const inputUnits=document.querySelector(".article__quantity");
+let totalPrice=document.querySelector(".article__total-price b").innerHTML;
+const cartMenuContainer=document.querySelector(".nav__menu-container");
+let cartMenuList=document.querySelector(".nav__cart-list").innerHTML;
+let articleName=document.querySelector(".article__tittle").innerHTML;
+const notifications=document.querySelector(".nav__cart-notifications");
+const articleImage=document.querySelector(".article__main-image");
 
 
 const addToCart=()=>{
@@ -16,32 +16,37 @@ const calculatedPrice=IntPrice*parseInt(inputUnits.value);
 
 if(cartMenuList.length===0){
     cartMenuContainer.innerHTML=`
-    <ul class="navigation-bar__purchase-cart__menu__container__list">
-        <li class="navigation-bar__purchase-cart__menu__container__list__item">  
-                <div class="navigation-bar__purchase-cart__menu__container__list__item__image-container">
-                    <img class="navigation-bar__purchase-cart__menu__container__list__item__image-container__image" src="${articleImage.src}" alt="image-article-${articleName}" >
-                </div>
+    <ul class="nav__menu-list">
+        <li class="nav__purchase">  
+                <img class="nav__purchase-image" src="${articleImage.src}" alt="image-article-${articleName}" >
 
-                <div class="navigation-bar__purchase-cart__menu__container__list__item__detail">
+                <div class="nav__purchase-detail">
                     <p>${articleName}</p>
                     <p>${stringPrice} x ${inputUnits.value} <b>$${calculatedPrice}.00</b> </p>
                 </div>
 
-                <button class="navigation-bar__purchase-cart__menu__container__list__item__remove-btn" 
+                <button class="nav__remove-purchase-btn" 
                 onclick="removeToCart()"}
-                ><img src="./images/icon-delete.svg" alt="remove-icon"></button>
+                ><img src="./images/icon-delete.svg" alt="icono de basurero"></button>
 
         </li> 
     </ul>
-    <button class="navigation-bar__purchase-cart__menu__container__checkout-btn">Checkout</button>
+    <button class="nav__checkout-btn">Checkout</button>
     `
+}
+else{
+
+    console.log(cartMenuList)
 }
 
 
 if(parseInt(inputUnits.value)===0){
     notifications.innerHTML=``}
 else{
-    notifications.innerHTML=`<div class="navigation-bar__purchase-cart__notifications__purchases"><p>${inputUnits.value}</p></div>`
+    notifications.innerHTML=`
+    <div class="nav__total-purchases">
+        <p>${inputUnits.value}</p>
+    </div>`
 }
 
 }

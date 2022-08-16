@@ -11,7 +11,7 @@
     --Black:hsl(0, 0%, 0%); /*(with 75% opacity for lightbox background)*/
 }
 
-.navigation-bar{
+.nav{
 margin-inline: 8%;
 display: inline-flex;
 position: relative;
@@ -22,52 +22,51 @@ margin-bottom: 0px;
 height: 10vh;
 }
 
-.navigation-bar__logo-pagina{
+.nav__logo-pagina{
     margin-top: 10px;
 }
 
-
-.navigation-bar__menu{
+.nav__menu{
     width: 47%;
     height: 100%;
     position: absolute;
     left: 20vh;
-    z-index: 1;
+    z-index: 2;
 }
 
-.navigation-bar__menu__list{
+.nav__menu-list{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     list-style-type: none;
     height: 100%;
     margin: 0;
+    margin-block: 0;
     padding: 0;
     align-items: center;
-
 }
 
 
-.navigation-bar__menu__list__item{
+.nav__menu-option{
     height: 100%;
     color: var(--Grayish-blue);
     cursor: pointer;
 }
 
-.navigation-bar__purchase-cart{
+.nav__purchase-cart{
     top: 2vh;
     position: absolute;
     right: 13vh;
     
 }
 
-.navigation-bar__profile-picture{
+.nav__profile{
     position: absolute;
     right: 3vh;
     top: 20%;
 }
 
-.navigation-bar__profile-picture__btn{
+.nav__profile-btn{
     background-color: white;
     cursor: pointer;
     height: 37px;
@@ -75,12 +74,12 @@ height: 10vh;
     
 }
 
-.navigation-bar__profile-picture__btn img{
+.nav__profile-btn img{
     border-radius: 28px;
     max-height: 100%;
     max-width: 100%;
 }
-.navigation-bar__purchase-cart__notifications__purchases{
+.nav__total-purchases{
     position: absolute;
     left: 23px;
     height: 13px;
@@ -90,19 +89,19 @@ height: 10vh;
 }
 
 
-.navigation-bar__purchase-cart__notifications__purchases p{
+.nav__total-purchases p{
     color: white;
     font-size: 11px;
     text-align: center;
     padding: 0;
     margin: 0;
 }
-.navigation-bar__purchase-cart__purchases_btn{
+.nav__purchase-cart-btn{
     background-color: white;
     cursor: pointer;
 }
 
-.navigation-bar__purchase-cart__menu{
+.nav__purchases-menu{
     /* visibility: hidden; */
     position: absolute;
     top: 80%;
@@ -112,80 +111,67 @@ height: 10vh;
     height: auto;
     background-color: white;
     box-shadow: 0 5px 5px 3px #e0dbdb;
+    z-index: 1;
 }
 
-.navigation-bar__profile-picture__btn img:hover{
+.nav__profile-btn img:hover{
     border: 1px var(--Orange) outset;
 }
 
-.navigation-bar__menu__list__item:hover{
+.nav__menu-option:hover{
     border-bottom: 4px var(--Orange) solid;
 }
 
-.navigation-bar__purchase-cart__menu_title{
+.nav__menu-title{
     padding: 10px;
     margin: 0;
     border-bottom: 1px solid var(--Grayish-blue);
-
 }
 
-.navigation-bar__purchase-cart__menu__container__list{
-list-style-type: none;
-padding-left: 0;
-margin-top: 2%;
-margin-bottom: 10%;
-}
-
-.navigation-bar__purchase-cart__menu__container__list__item{
+.nav__purchase{
 display: flex;
 flex-direction: row;
-
 }
 
 
-.navigation-bar__purchase-cart__menu__container{
+.nav__menu-container{
 padding: 7% 5%;
 }
 
-.navigation-bar__purchase-cart__menu__container__checkout-btn{
+.nav__checkout-btn {
     background-color: var(--Orange);
     color: white;
     width: 100%; 
 }
 
 
-
-.navigation-bar__purchase-cart__menu__container__list__item__image-container__image{
-height: 100%;
-width: 100%;
-border-radius: 10px;
-}
-
-.navigation-bar__purchase-cart__menu__container__list__item__image-container{
+.nav__purchase-image{
     height: 45px;
     width: 45px;
+    border-radius: 10px;
 }
 
-.navigation-bar__purchase-cart__menu__container__list__item__detail{
+
+.nav__purchase-detail{
     font-size: 16px;
     margin-inline: 13px;
     color: var(--Dark-grayish-blue);
 }
 
-.navigation-bar__purchase-cart__menu__container__list__item__detail p{
+.nav__purchase-detail p{
     margin: 0;
 }
 
-.navigation-bar__purchase-cart__menu__container__list__item__detail p b {
+.nav__purchase-detail p b {
     color: black;
 }
 
-.navigation-bar__purchase-cart__menu__container__list__item__remove-btn{
+.nav__remove-purchase-btn{
     background-color: white;
     cursor: pointer;
 }
 
-.navigation-bar__open-menu-btn, .navigation-bar__close-menu-btn{
+.nav__menu-btn {
     display: none;
     background-color: white;
     border: none;
@@ -193,54 +179,57 @@ border-radius: 10px;
 }
 
 @media screen and (max-width: 650px) {
-    .navigation-bar{
+    .nav{
         border: 0;
-        margin: 0;
+        margin: 0 2%;
     }
 
-    .navigation-bar__open-menu-btn{
-        margin-top:10px ;
-        display: inline;
+    .nav__menu-btn--open {
+        margin-top: 5px;
+        display: inline-block;
     }
 
-    .navigation-bar__close-menu-btn
+    .nav__menu-btn--close
     {
         display: block;
     }
 
-
-    .navigation-bar__menu{
+    .nav__menu{
         visibility: hidden;
-        position: absolute;
         top: 0;
-        left: 0;
-        height: 130vh;
-        width: 90%;
+        position: absolute;
+        left: -4%;
+        height: 150vh;
+        width: 100%;
         background-color: white;
     }
 
-    .navigation-bar__menu__list {
+    .nav__menu-list {
         display: flex;
         align-items: flex-start;
         flex-direction: column;
         justify-content: space-between;
         height: 40%;
         font-weight: 900;
-
+        list-style-type: none;
     }
 
-    .navigation-bar__menu__list__item{
+    .nav__menu-option{
         color: black;
     }
 
-    .navigation-bar__menu__list__item:hover{
+    .nav__menu-option:hover{
         border: none;
     }
 
-    .navigation-bar__logo-pagina{
-        font-size: 35px;
+
+    .nav__logo-pagina {
+        font-size: 30px;
+        font-weight: bolder;
+        margin-top: 3px;
     }
-    .navigation-bar__purchase-cart__menu{
+
+    .nav__purchases-menu{
         position: fixed;
         left: 4%;
         top:12%;
@@ -249,15 +238,24 @@ border-radius: 10px;
         box-shadow: none;
     }
 
-    .navigation-bar__profile-picture {
+    .nav__profile{
         left: 100%;
     }
 
-    .navigation-bar__purchase-cart {
+    .nav__purchase-cart {
         left: 85%;
     }
 }
 
-.navigation-bar__menu__activate{
+.nav__menu--activate{
     visibility: visible;
+}
+
+.nav__purchase {
+    justify-content: center;
+    margin-block: 5%;
+}
+
+.nav__checkout-btn:hover{
+    opacity: 0.5;
 }

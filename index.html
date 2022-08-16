@@ -13,78 +13,73 @@
 </head>
 <body>
     <header>
-        <nav class="navigation-bar">
-            <Button class="navigation-bar__open-menu-btn"> <img src="./images/icon-menu.svg" alt="boton-abrir-menu"> </Button>
-            <h1 class="navigation-bar__logo-pagina">sneakers</h1>
-            <div class="navigation-bar__menu">
-                <button class="navigation-bar__close-menu-btn"><img src="./images/icon-close.svg"  alt="boton-cerrar-menu"></button>   
-                <ul class="navigation-bar__menu__list">
-                    <li class="navigation-bar__menu__list__item"><p>Collections</p></li>
-                    <li class="navigation-bar__menu__list__item"><p>Men</p></li>
-                    <li class="navigation-bar__menu__list__item"> <p>Women</p></li>
-                    <li class="navigation-bar__menu__list__item"><p>About</p></li>
-                    <li class="navigation-bar__menu__list__item"> <p>Contact</p></li>
+        <nav class="nav">
+            <Button class="nav__menu-btn   nav__menu-btn--open"> <img src="./images/icon-menu.svg" alt="icono del boton abrir menu"> </Button>
+            <h1 class="nav__logo-pagina">sneakers</h1>
+            <div class="nav__menu">
+                <button class="nav__menu-btn   nav__menu-btn--close"><img src="./images/icon-close.svg"  alt="icono del boton cerrar menu"></button>   
+                <ul class="nav__menu-list">
+                    <li class="nav__menu-option"><p>Collections</p></li>
+                    <li class="nav__menu-option"><p>Men</p></li>
+                    <li class="nav__menu-option"><p>Women</p></li>
+                    <li class="nav__menu-option"><p>About</p></li>
+                    <li class="nav__menu-option"><p>Contact</p></li>
                 </ul>
             </div>
-            <div class="navigation-bar__purchase-cart">
-                <div class="navigation-bar__purchase-cart__notifications">  
+            <div class="nav__purchase-cart">
+                <div class="nav__cart-notifications"><!--   <div class="nav__purchase-cart__notifications">   -->
                 </div>
-                <button class="navigation-bar__purchase-cart__purchases_btn" id="purchases-btn"><img src="./images/icon-cart.svg" alt="purchase-cart-icon"> </button>     
-            </div> 
-            <div class="navigation-bar__purchase-cart__menu" id="cart-menu" hidden>
-                <p class="navigation-bar__purchase-cart__menu_title"><b>Cart</b></p>
-                <div class="navigation-bar__purchase-cart__menu__container">
-                    <p>your cart is empty</p>
-                    <ul class="navigation-bar__purchase-cart__menu__container__list"></ul>
-                </div>
+                <button class="nav__purchase-cart-btn"><img src="./images/icon-cart.svg" alt="icono del carrito de compras"> </button><!--navigation-bar__purchase-cart__purchases_btn-->     
             </div>
-            <div class="navigation-bar__profile-picture">
-                <button class="navigation-bar__profile-picture__btn"><img src="./images/image-avatar.png" alt="profile-picture"> </button>
+             <div class="nav__purchases-menu" hidden> <!-- nav__purchase-cart__menu -->
+                 <p class="nav__menu-title"><b>Cart</b></p><!-- "nav__purchases-menu_title" -->
+                 <div class="nav__menu-container"> <!-- "nav__purchases-menu__container" -->
+                    <p>your cart is empty</p>
+                    <ul class="nav__cart-list"></ul><!-- nav__purchases-menu__container__list -->
+                 </div>
+            </div>
+            <div class="nav__profile"> <!-- nav__profile-picture-->
+                <button class="nav__profile-btn"><img src="./images/image-avatar.png" alt="foto de perfil"> </button> <!--nav__profile-picture-btn-->
             </div> 
         </nav>
 
     </header>
     <main>
         <section>
-            <article class="product-article">
-                <div class="product-article__article-view">
-                    <div class="product-article__article-view__main-image">
-                        <button class="product-article__article-view__main-image__change-img-btn  previous-btn"><img src="./images/icon-previous.svg" alt="imagen-boton-anterior-imagen"></button>
-                        <img class="product-article__article-view__main-image__image" src="./images/image-product-1.jpg" alt="image-sneakers-limited-edition">
-                        <button class="product-article__article-view__main-image__change-img-btn next-btn"> <img src="./images/icon-next.svg" alt="imagen-boton-siguiente-imagen"></button>
-                    </div>
-                    <div class="product-article__article-view__select">
-                        <img class="product-article__article-view__select__thumbnail image-btn-active" id="product-select-image-1" src="./images/image-product-1-thumbnail.jpg" alt="miniatura-imagen-producto-1" onclick="setMainImage(1)">
-                        <img class="product-article__article-view__select__thumbnail" id="product-select-image-2" src="./images/image-product-2-thumbnail.jpg" alt="miniatura-imagen-producto-2" onclick="setMainImage(2)">
-                        <img class="product-article__article-view__select__thumbnail" id="product-select-image-3" src="./images/image-product-3-thumbnail.jpg" alt="miniatura-imagen-producto-3" onclick="setMainImage(3)">
-                        <img class="product-article__article-view__select__thumbnail" id="product-select-image-4" src="./images/image-product-4-thumbnail.jpg" alt="miniatura-imagen-producto-4" onclick="setMainImage(4)">      
+            <article class="article"> <!--product-article-->
+                <div class="article__article-images"> <!--product-article__article-view-->
+                    <div class="article__main-image-container"> <!--product-article__article-view__main-image-->
+                        <button class="article__btn  article__btn--prev"><img src="./images/icon-previous.svg" alt="imagen del boton para cambiar a la anterior imagen"></button> <!--product-article__article-view__main-image__change-img-btn  previous-btn-->
+                        <img class="article__main-image" src="./images/image-product-1.jpg" alt="imagen sneakers edicion limitada"> <!--product-article__article-view__main-image__image-->
+                        <button class="article__btn  article__btn--next"> <img src="./images/icon-next.svg" alt="imagen del boton para cambiar a la siguiente imagen"></button> <!--product-article__article-view__main-image__change-img-btn next-btn-->
+                    </div> 
+                    <div class="article__image-selector"> <!--product-article__article-view__select-->
+                        <img class="article__thumbnail article__thumbnail--active" src="./images/image-product-1-thumbnail.jpg" alt="miniatura 1 del producto" onclick="setMainImage(1)"> <!--product-article__article-view__select__thumbnail image-btn-active-->
+                        <img class="article__thumbnail" src="./images/image-product-2-thumbnail.jpg" alt="miniatura 2 del producto" onclick="setMainImage(2)"> <!--product-article__article-view__select__thumbnai-->
+                        <img class="article__thumbnail" src="./images/image-product-3-thumbnail.jpg" alt="miniatura 3 del producto" onclick="setMainImage(3)">
+                        <img class="article__thumbnail" src="./images/image-product-4-thumbnail.jpg" alt="miniatura 4 del producto" onclick="setMainImage(4)"> <!--product-article__article-view__select__thumbnai-->     
                     </div>
                 </div>
-                <div class="product-article__article-description">
-                    <div class="product-article__article-description__name-company">
-                       <b>SNEAKERS COMPANY</b> 
-                    </div>
-                    <div class="product-article__article-description__tittle">
-                        <h1>Fall Limited Edition Sneakers</h1>
-                    </div>
-                    <div class="product-article__article-description__description">
+
+                <div class="article__details"> <!--product-article__article-description-->
+                    <b class="article__company">SNEAKERS COMPANY</b><!--product-article__article-description__name-company--> 
+                    <h1 class="article__tittle">Fall Limited Edition Sneakers</h1> <!--product-article__article-description__tittle-->
+                    <p class="article__description"> <!--product-article__article-description__description-->
                         These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole. They'll withstand everything the weather can offer.
-                    </div>
-                    <div class="product-article__article-description__total-price"> <b>$125.00</b></div>
-                    <div class="product-article__article-description__discount"  ><b>50%</b></div>
-                    <div class="product-article__article-description__real-price" ><b>$250.00</b></div>
-                    <form class="product-article__article-description__amount">
-                        <div class="inputs-container">
-                        <div class="cuantity-selector">
-                            <button class="product-article__article-description__amount__reduce-btn" id="amount__reduce-btn"><b>-</b></button>
-                            <input class="product-article__article-description__amount__quantity" type="text" name="units" id="input-units" min="0" max="10" value="0" readonly>
-                            <button class="product-article__article-description__amount__increase-btn" id="amount__increase-btn"> <b>+</b> </button>
+                    </p>
+                    <p class="article__total-price"><b>$125.00</b></p>
+                    <p class="article__discount"><b>50%</b></p>
+                    <p class="article__real-price" ><b>$250.00</b></p>
+                    <form class="article__order article__inputs-container"> <!--product-article__article-description__amount--> <!--inputs-container-->
+                        <div class="article__quantity-selector"> <!--cuantity-selector  -->
+                            <button class="article__amount-btn article__amount-btn--reduce"><b>-</b></button> <!--product-article__article-description__amount__reduce-btn-->
+                            <input class="article__quantity" type="text" name="units" min="0" max="10" value="0" readonly> <!--product-article__article-description__amount__quantity-->
+                            <button class="article__amount-btn article__amount-btn--increase"> <b>+</b> </button> <!--product-article__article-description__amount__increase-btn-->
                         </div>
-                        <button class="product-article__article-description__amount__submit-btn" id="add-to-cart-button" type="submit"> 
-                            <img src="./images/icon-cart.svg" alt="purchase-cart-icon">
+                        <button class="article__submit-btn" type="submit"> <!--product-article__article-description__amount__submit-btn-->
+                            <img src="./images/icon-cart.svg" alt="icono de carrito de compras">
                             Add to cart
                         </button>                    
-                    </div>
                     </form>
 
                 </div>
