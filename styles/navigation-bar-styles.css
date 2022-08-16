@@ -136,6 +136,7 @@ flex-direction: row;
 
 .nav__menu-container{
 padding: 7% 5%;
+text-align: center;
 }
 
 .nav__checkout-btn {
