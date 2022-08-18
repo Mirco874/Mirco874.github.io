@@ -104,6 +104,7 @@ color: var(--Dark-grayish-blue);
     background-color: var(--Paleo-orange);
     height: 20px;
     width: 33px; 
+    padding: 8px;
 
 }
 

@@ -20,6 +20,7 @@ border-bottom: 1px var(--Grayish-blue) solid;
 align-items: flex-start;
 margin-bottom: 0px;
 height: 10vh;
+align-items: center;
 }
 
 .nav__logo-pagina{
@@ -51,6 +52,7 @@ height: 10vh;
     height: 100%;
     color: var(--Grayish-blue);
     cursor: pointer;
+    align-items: center;
 }
 
 .nav__purchase-cart{
@@ -86,6 +88,7 @@ height: 10vh;
     width: 22px;
     background-color: var(--Orange);
     border-radius: 4px;
+    z-index: 1;
 }
 
 
@@ -186,8 +189,8 @@ text-align: center;
     }
 
     .nav__menu-btn--open {
-        margin-top: 5px;
         display: inline-block;
+        margin-bottom: 10px;
     }
 
     .nav__menu-btn--close
